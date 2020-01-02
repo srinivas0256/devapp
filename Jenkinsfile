@@ -13,4 +13,8 @@ node {
 Thanks
 Srinu''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'sriiniv703@gmail.com'
     }
+        statge('Send Slack Notification') {
+        slackSend baseUrl: 'https://hooks.slack.com/services/', channel: '#jenkins-pipeline-demo',
+            color: 'good', message: 'Welcome to Jenkins, Slack!', tokenCredentialId: 'slack-demo', 
+            username: 'devops1-workspace'
 }
